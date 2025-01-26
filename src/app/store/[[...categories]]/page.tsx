@@ -12,5 +12,5 @@ export default async function Category(props: CategoryProps) {
   console.log("category", categories);
   console.log("searchParams", props.searchParams);
 
-  return <h1>Dynamic Category: {categories.join(", ")}</h1>;
+  return <h1>Dynamic Category: {categories}</h1>;
 }

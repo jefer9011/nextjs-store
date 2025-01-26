@@ -1,7 +1,7 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "app/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,28 +13,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+/* export const metadata: Metadata = {
   title: "Future World",
   description: "Future World is a store for the future.",
-};
+}; */
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+
+{
+  console.log("RootLayout SSR initial page");
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header>
-          <nav>
-            <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/store">Categories</Link></li>
-              <li><Link href="/store/tech">Tech</Link></li>
-            </ul>
-          </nav>
-        </header>
+      <Header></Header>
         {children}
       </body>
     </html>

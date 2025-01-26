@@ -1,15 +1,17 @@
 import styles from "./Description.module.sass";
 import Image from "next/image";
+import { PLACEHOLDER_IMAGE } from "../../../../config/images";
 
 export const Description = () => {
   return (
     <section className={styles.description}>
-      <div className={styles.imageWrapper}>
+      <div className={styles.description__imageContainer}>
         <Image
           src="/images/description.jpg"
           alt="Products marketplace"
-          width={300}
-          height={200}
+          fill
+          placeholder="blur"
+          blurDataURL={PLACEHOLDER_IMAGE}
         />
       </div>
       <div className={styles.content}>

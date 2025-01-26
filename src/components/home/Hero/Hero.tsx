@@ -1,9 +1,11 @@
-
+import styles from './Hero.module.css';
 
 export const Hero = () => {
+    
   return (
-    <section>
-      <h2>Hero Comp</h2>
+    <section className={styles.hero}>
+      <h2>Future World</h2>
+      <h3>¡Empowering Tour Tomorrow, Today!</h3>
     </section>
   );
 };

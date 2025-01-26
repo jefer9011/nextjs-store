@@ -1,19 +1,34 @@
-import styles from "./Description.module.sass";
+"use client";
+import classNames from "classnames/bind";
+import { useState } from "react";
 import Image from "next/image";
+import styles from "./Description.module.sass";
 import { PLACEHOLDER_IMAGE } from "../../../../config/images";
 
+
 export const Description = () => {
+  const [hasBorder, setBorder] = useState(false);
+  const handleClick = () => setBorder(!hasBorder);
+  const cx = classNames.bind(styles);
+
+  const btnStyles = cx("description__button", {
+    "description__button--border": hasBorder,
+  })
+  console.log(btnStyles);
+  
   return (
     <section className={styles.description}>
-      <div className={styles.description__imageContainer}>
-        <Image
-          src="/images/description.jpg"
-          alt="Products marketplace"
-          fill
-          placeholder="blur"
-          blurDataURL={PLACEHOLDER_IMAGE}
-        />
-      </div>
+      <button className={btnStyles} onClick={handleClick}>
+        <div className={styles.description__imageContainer}>
+          <Image
+            src="/images/description.jpg"
+            alt="Products marketplace"
+            fill
+            placeholder="blur"
+            blurDataURL={PLACEHOLDER_IMAGE}
+          />
+        </div>
+      </button>
       <div className={styles.content}>
         <h2>Description</h2>
         <p>

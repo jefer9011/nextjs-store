@@ -1,14 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playwrite_IN } from "next/font/google";
 import { Header } from "app/components/shared/header";
 import { Footer } from "app/components/shared/Footer";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const playwrite = Playwrite_IN({
+  weight: ["100", "200", "300", "400"],
 });
 
 export default function RootLayout({
@@ -18,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ backgroundColor: "#001" }}>
+      <body
+        className={playwrite.className}
+        style={{ backgroundColor: "#001" }}
+      >
         <Header></Header>
         {children}
         <Footer></Footer>

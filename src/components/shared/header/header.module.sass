@@ -1,0 +1,42 @@
+@import 'variables.sass'
+.header
+    position: fixed
+    background-color: transparent
+    width: 100%
+    top: 0
+    z-index: 100
+    transition: all .3s ease-in-out
+    & > nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        padding: 1rem 0
+
+        & > a
+            font-size: 1.5rem
+            font-weight: bold
+            color: #333
+            text-decoration: none
+
+        & > ul
+            display: flex
+            list-style: none
+            justify-content: center
+            margin: auto
+            padding: 0
+
+            & > li
+                margin-left: 1rem
+
+                & > a
+                    color: #333
+                    text-decoration: none
+                    font-family: 'Roboto', sans-serif
+                    color: $color-primary
+                    font-weight: bold
+                    text-transform: capitalize
+
+                    &:hover
+                        color: $color-secondary
+                        transition: all .3s ease-in-out

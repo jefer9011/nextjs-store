@@ -1,10 +1,9 @@
 
 import Link from "next/link"
-
+import styles from "./header.module.sass";
 export const Header = () => {
-    console.log("Header SSR initial page");
     return (
-        <header>
+        <header className={styles.header}>
         <nav>
             <ul>
             <li><Link href="/">Home</Link></li>

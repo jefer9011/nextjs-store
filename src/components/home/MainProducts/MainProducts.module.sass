@@ -1,0 +1,38 @@
+
+.MainProducts
+    padding: 2em
+
+    h3
+        font-size: 2rem
+        margin-bottom: 2rem
+        color: $accent-color-light
+        font-family: 'Roboto', sans-serif
+        text-align: center
+
+    &__grid
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr))
+
+        article
+            position: relative
+            height: 400px
+            cursor: pointer
+            overflow: hidden
+            p
+                position: absolute
+                top: 1rem
+                right: 1rem
+                color: $accent-color-light
+                font-weight: 500
+                font-size: 1.6rem
+                z-index: 10
+                text-shadow: 2px 2px 4px rgba(0,0,0,5)
+                padding: 0.5rem
+                border-radius: 4px
+                font-family: 'Roboto', sans-serif
+
+            img
+                objec-fit: cover
+                transition: transform 0.3s ease
+                &:hover
+                    transform: scale(1.1)

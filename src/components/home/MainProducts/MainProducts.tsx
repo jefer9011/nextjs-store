@@ -1,5 +1,7 @@
 import Image from "next/image";
-import styles from "./MainProducts.module.sass"; // Adjust the path as necessary
+import styles from "./MainProducts.module.sass";
+
+
 
 const getProducts = async () => {
   try {

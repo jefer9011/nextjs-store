@@ -13,10 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={playwrite.className}
-        style={{ backgroundColor: "#001" }}
-      >
+      <body className={playwrite.className}>
         <Header></Header>
         {children}
         <Footer></Footer>

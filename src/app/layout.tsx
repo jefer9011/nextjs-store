@@ -1,10 +1,13 @@
-import { Playwrite_IN } from "next/font/google";
+import { Inter } from 'next/font/google'
 import { Header } from "app/components/shared/header";
 import { Footer } from "app/components/shared/Footer";
 
-const playwrite = Playwrite_IN({
-  weight: ["100", "200", "300", "400"],
-});
+
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
@@ -13,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={playwrite.className}>
+      <body className={inter.className}>
         <Header></Header>
         {children}
         <Footer></Footer>

@@ -13,7 +13,7 @@ interface CategoryProps {
 }
 
 export default async function Category(props: CategoryProps) {
-  const { categories } = props.params;
+  const { categories } = await props.params;
 
   let products = await getProducts();
 

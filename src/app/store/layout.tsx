@@ -1,6 +1,7 @@
 import { getCollections } from "app/services/shopify/collections";
 import Link from "next/link";
 import styles from './layout.module.sass'
+import { Suspense } from 'react'
 
 export default async function Layout({
   children,
@@ -21,7 +22,9 @@ export default async function Layout({
           </Link>
         ))}
       </nav>
-      {children}
+      <Suspense fallback={<div>Loading products...</div>}>
+        {children}
+      </Suspense>
     </main>
   );
 }

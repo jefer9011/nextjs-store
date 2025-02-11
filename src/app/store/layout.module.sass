@@ -1,0 +1,41 @@
+.nav
+  background: rgba(13, 12, 34, 0.95)  // Fondo oscuro semi-transparente
+  backdrop-filter: blur(8px)          // Efecto de cristal esmerilado
+  padding: 1rem
+  position: sticky
+  top: 0
+  z-index: 100
+  border-bottom: 1px solid rgba(78, 90, 255, 0.2)  // Borde sutil con tono azul
+  
+  &__container
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    gap: 1.5rem
+
+  a
+    color: #9BA1FF               // Color base azul claro
+    text-decoration: none
+    padding: 0.8rem 1.5rem
+    border-radius: 8px
+    font-weight: 500
+    position: relative
+    transition: all 0.3s ease
+    
+    // Efecto hover futurista
+    &:hover
+      color: #FFFFFF
+      background: linear-gradient(45deg, rgba(78, 90, 255, 0.1), rgba(78, 90, 255, 0.2))
+      box-shadow: 0 0 20px rgba(78, 90, 255, 0.15)
+      
+      // Línea de subrayado animada
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        width: 50%
+        height: 2px
+        background: linear-gradient(90deg, transparent, #4E5AFF, transparent)
+        transform: translateX(-50%)

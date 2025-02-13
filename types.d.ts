@@ -4,6 +4,7 @@ interface ErrorPageProps {
 }
 
 type ProductType = {
+  [x: string]: any;
   id: string;
   title: string;
   description: string;

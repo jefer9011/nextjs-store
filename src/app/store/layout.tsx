@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from './layout.module.sass'
 import { Suspense } from 'react'
 
+export const runtime = "edge"
+
 export default async function Layout({
   children,
 }: {

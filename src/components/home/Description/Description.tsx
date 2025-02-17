@@ -20,7 +20,7 @@ export const Description = () => {
       <button className={btnStyles} onClick={handleClick}>
         <div className={styles.description__imageContainer}>
           <Image
-            src="/images/description.jpg"
+            src="/images/main_banner.jpg"
             alt="Products marketplace"
             fill
             placeholder="blur"
